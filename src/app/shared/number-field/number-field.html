@@ -1,0 +1,15 @@
+<label class="block">
+  <span class="text-sm font-medium text-slate-700">{{ label() }}</span>
+  <input
+    type="number"
+    step="0.1"
+    [formField]="field()"
+    [placeholder]="placeholder()"
+    [attr.aria-invalid]="!!errorMessage()"
+    class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-blue-500 focus:outline-none aria-invalid:border-red-500"
+  />
+</label>
+
+@if (errorMessage(); as message) {
+  <p role="alert" class="mt-1 text-sm text-red-600">{{ message }}</p>
+}

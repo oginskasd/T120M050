@@ -1,0 +1,13 @@
+<main class="flex min-h-screen items-center justify-center bg-slate-100 p-4">
+  <div class="w-full max-w-sm rounded-2xl bg-white p-6 shadow-lg">
+    <h1 class="mb-6 text-center text-2xl font-bold text-slate-800">KMI skaičiuoklė</h1>
+
+    <app-bmi-form (submitted)="showBmi($event)" />
+
+    <div aria-live="polite">
+      @if (bmi(); as bmi) {
+        <app-bmi-result class="mt-6" [bmi]="bmi" />
+      }
+    </div>
+  </div>
+</main>

@@ -1,0 +1,11 @@
+<form [formRoot]="bmiForm" class="space-y-4">
+  <app-number-field [field]="bmiForm.weightKg" label="Svoris (kg)" placeholder="pvz. 70" />
+  <app-number-field [field]="bmiForm.heightCm" label="Ūgis (cm)" placeholder="pvz. 175" />
+
+  <button
+    type="submit"
+    class="w-full rounded-lg bg-blue-600 py-2 font-semibold text-white hover:bg-blue-700"
+  >
+    Skaičiuoti
+  </button>
+</form>
