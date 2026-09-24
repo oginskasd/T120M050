@@ -1,0 +1,32 @@
+<form [formRoot]="noteForm" class="space-y-3 rounded-xl bg-white p-4 shadow-md">
+  <div>
+    <input
+      type="text"
+      aria-label="Antraštė"
+      placeholder="Antraštė"
+      [formField]="noteForm.title"
+      class="w-full text-lg font-semibold text-slate-800 outline-none placeholder:text-slate-400"
+    />
+    <app-field-error [field]="noteForm.title" />
+  </div>
+
+  <div>
+    <textarea
+      aria-label="Tekstas"
+      placeholder="Užrašo tekstas..."
+      rows="3"
+      [formField]="noteForm.text"
+      class="w-full resize-none text-slate-700 outline-none placeholder:text-slate-400"
+    ></textarea>
+    <app-field-error [field]="noteForm.text" />
+  </div>
+
+  <div class="flex justify-end">
+    <button
+      type="submit"
+      class="rounded-lg bg-amber-400 px-5 py-2 font-medium text-slate-900 hover:bg-amber-500"
+    >
+      Pridėti
+    </button>
+  </div>
+</form>

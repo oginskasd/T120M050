@@ -1,0 +1,11 @@
+@if (notes().length) {
+  <ul class="columns-1 gap-4 sm:columns-2 lg:columns-3">
+    @for (note of notes(); track note.id) {
+      <li class="mb-4 break-inside-avoid">
+        <app-note-card [note]="note" (removed)="removed.emit(note.id)" />
+      </li>
+    }
+  </ul>
+} @else {
+  <p class="text-center text-slate-500">Užrašų dar nėra</p>
+}

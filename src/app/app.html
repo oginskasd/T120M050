@@ -1,0 +1,9 @@
+<main class="min-h-screen bg-slate-100 px-4 py-10">
+  <div class="mx-auto max-w-5xl">
+    <h1 class="mb-8 text-center text-3xl font-bold text-slate-800">Užrašai</h1>
+
+    <app-note-form class="mx-auto mb-10 block max-w-xl" (added)="noteStore.add($event)" />
+
+    <app-note-list [notes]="noteStore.notes()" (removed)="noteStore.remove($event)" />
+  </div>
+</main>
